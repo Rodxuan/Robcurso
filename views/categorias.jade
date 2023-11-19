@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1= title
+  
+    a(href="/") Home
+
+    ul
+        each categoria in categorias
+            li #{ categoria.categoria }
+
+            ul
+                each equipo in categoria.equipos 
+                    li #{ equipo }
+
+            br

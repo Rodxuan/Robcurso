@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1= title
+  
+    a(href="/") Home
+
+    ul
+        each equipo in equipos
+            li #{ equipo.equipo }
+
+            ul
+                each integrante in equipo.integrantes 
+                    li #{ integrante }
+
+            br
